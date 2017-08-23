@@ -59,6 +59,7 @@ export default {
     };
     const components = layout.split(',').map((item) => item.trim());
     const rightWrapper = <div class="el-pagination__rightwrapper"></div>;
+    const leftWrapper = <div class="el-pagination__leftwrapper"></div>;
     let haveRightWrapper = false;
 
     if (this.small) {
@@ -72,12 +73,12 @@ export default {
       }
 
       if (!haveRightWrapper) {
-        template.children.push(TEMPLATE_MAP[compo]);
+        leftWrapper.children.push(TEMPLATE_MAP[compo]);
       } else {
         rightWrapper.children.push(TEMPLATE_MAP[compo]);
       }
     });
-
+    template.children.push(leftWrapper);
     if (haveRightWrapper) {
       template.children.unshift(rightWrapper);
     }

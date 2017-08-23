@@ -121,6 +121,10 @@
       float: right;
     }
 
+    @e leftwrapper {
+      float: left;
+    }
+
     @e editor {
       border: 1px solid var(--pagination-border-color);
       border-radius: var(--pagination-border-radius);
